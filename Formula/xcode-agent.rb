@@ -2,15 +2,15 @@ class XcodeAgent < Formula
   desc "Agent-friendly CLI for iOS/macOS development"
   homepage "https://github.com/chandilsachin/xcode-agent"
   url "https://github.com/chandilsachin/xcode-agent/releases/download/v0.1.0/xcode-agent-0.1.0-arm64-apple-macosx.tar.gz"
-  sha256 "3e8c3399f7e4ee82557068d183ff0a8e33271586f4fb6c81cbdcd84f583d14d4"
+  sha256 "3f373b305d0eb44f2891297d820c0d27e9ed9d1904a57fab0bf7af63c71369be"
   version "0.1.0"
   license "MIT"
 
   def install
-    bin.install "xcode"
+    bin.install "xcode-agent"
   end
 
   test do
-    assert_match "xcode-agent", shell_output("#{bin}/xcode --version")
+    assert_match "xcode-agent", shell_output("#{bin}/xcode-agent --version")
   end
 end
